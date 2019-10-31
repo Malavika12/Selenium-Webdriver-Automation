@@ -1,13 +1,13 @@
 
 package lib.page;
 
-//import lib.Data.Testdata.AddAddata;
 import lib.locator.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.List;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -61,10 +61,10 @@ import java.util.concurrent.TimeUnit;
 		 }
 		 
 		 public AddAdpage AddCategory() {
-			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("categoryType")));
-			 driver.findElement(By.name("categoryType")).click();
-			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/app-home-nav-view/div/mat-sidenav-container/mat-sidenav-content/app-add-advertisement/div[1]/div[2]/form/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[1]/span/span")));
-			 driver.findElement(By.xpath("/html/body/app-root/app-home-nav-view/div/mat-sidenav-container/mat-sidenav-content/app-add-advertisement/div[1]/div[2]/form/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[1]/span/span")).click();
+			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mat-select-0\"]")));
+			 driver.findElement(By.xpath("//span[contains(text(), 'Advertisement Category')]")).click();
+			 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			 driver.findElement(By.xpath("//span[contains(text(), 'Food')]/..")).click();
 			 return this;
 			 
 		 }

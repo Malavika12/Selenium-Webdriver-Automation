@@ -6,7 +6,8 @@ public class AddAd {
 							   MTITLE = "Advertisement",
 							   ADDADBTN = "mat-sidenav-content > app-advertisement", //css
 								TITLE = "#mat-input-0", //CSS
-								CATEGORY = "mat-select-3", //css ID
+								CATEGORY = "//*[@id=\"mat-select-0\"]", // xpath
+								OPTIONS = "",
 								START = "#mat-input-1", //css ID
 								END = "#mat-input-2", //css ID
 								DEVICE = "#mat-select-1",

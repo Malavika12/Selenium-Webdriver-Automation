@@ -34,7 +34,7 @@ public class Homepage {
 	public Homepage clickOnLoginButton(){                                             /*Clicks on Login button*/
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Home.LOGBTN)));
 		driver.findElement(By.xpath(Home.LOGBTN)).click();
-		driver.navigate().to("http://stream-ads.com/#home");
+		driver.navigate().to("http://stream-ads.com/login");
 		return this;
 	}
 	

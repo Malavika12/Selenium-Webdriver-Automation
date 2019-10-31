@@ -6,7 +6,7 @@ public class Testdata
 	public class Homedata{
 		public static final String URL = "http://stream-ads.com/#homepage",
 								  TITLE = "Advertisement",
-								  LOGBTN = "http://stream-ads.com/#home";
+								  LOGBTN = "http://stream-ads.com/login";
 								   
 									
 	}
@@ -15,7 +15,7 @@ public class Testdata
 	
 	public class Logindata {
 
-		public static final String URL = "http://stream-ads.com/#home",
+		public static final String URL = "http://stream-ads.com/login",
 								   TITLE="Advertisement",
 								   EMAIL= "malusanu12@gmail.com",
 								   PASSWORD="Honeybee12345@",
@@ -39,9 +39,9 @@ public class Testdata
 								   MTITLE = "Advertisement",
 								   ADDADBTN = "http://stream-ads.com/home/addAdvertisement",
 									TITLE = "Marley_Spoon", 
-									CATEGORY = "Add Advertisement",
+									CATEGORY = "Food",
 									START = "21/10/2019", 
-									END = "22/10/19", 
+									END = "22/10/2019", 
 									DEVICE = "2nd Main Rd, Phase 4, J. P. Nagar, Bengaluru, Karnataka 560078, India",
 									CHOOSEFILE = "C:\\Users\\dell\\Desktop\\Internship",
 									PREVIEW = "http://stream-ads.com/home/preview",
