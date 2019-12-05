@@ -1,4 +1,4 @@
-package lib.page;
+package lib.Userpage;
 import lib.locator.Home;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,7 +34,6 @@ public class Homepage {
 	public Homepage clickOnLoginButton(){                                             /*Clicks on Login button*/
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Home.LOGBTN)));
 		driver.findElement(By.xpath(Home.LOGBTN)).click();
-		driver.navigate().to("http://stream-ads.com/login");
 		return this;
 	}
 	

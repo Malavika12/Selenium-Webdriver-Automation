@@ -3,11 +3,10 @@ package lib.locator;
 public class Login {
 
 
-	public static final String URL = "http://stream-ads.com/#home",//ID locator for URL
-							   TITLE="Advertisement",//Title 
-							   EMAIL= "#mat-input-4",//CSS for reading email
-							   PASSWORD="#mat-input-5",//CSS for reading password
-							   LOGINBTN="div:nth-child(1)";//css for login button
+	public static final String TITLE="Advertisement",//Title 
+							   EMAIL= "email",//name for email field
+							   PASSWORD="password",//name for password
+							   LOGINBTN=" //div[3]/div[1]/button";//xpath for login button
 	 						   
 }
 	

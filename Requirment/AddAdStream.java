@@ -3,7 +3,7 @@ package Requirment;
 import config.Configuration;
 import org.testng.annotations.Test;
 import lib.Data.Testdata.*;
-import lib.page.*;
+import lib.Userpage.*;
 
 public class AddAdStream extends Configuration {
 	
@@ -34,8 +34,7 @@ public class AddAdStream extends Configuration {
 		/*ASSERTIONS /
 		/ PAGE METHODS /
 		/ Object.method(); */
-		Log.launchUrl(Logindata.URL)
-		.verifyTitle(Logindata.TITLE)
+		Log.verifyTitle(Logindata.TITLE)
 		.enterEmail(Logindata.EMAIL)
 		.enterPassword(Logindata.PASSWORD)
 		.clickOnLoginButton();
@@ -51,8 +50,7 @@ public class AddAdStream extends Configuration {
 		/*ASSERTIONS /
 		/ PAGE METHODS /
 		/ Object.method(); */
-		Ad.launchUrl(ViewAddata.URL)
-		.verifyTitle(ViewAddata.TITLE)
+		Ad.verifyTitle(ViewAddata.TITLE)
 		.clickonManageButton()
 		.View();
 		
@@ -62,17 +60,18 @@ public class AddAdStream extends Configuration {
 		public void AddAd()throws Exception{
 			
 			AddAdpage Add= new AddAdpage(super.driver, super.wait);
-			Add.launchUrl(AddAddata.URL)
-			.verifyMTitle(AddAddata.MTITLE)
+			Add.verifyMTitle(AddAddata.MTITLE)
 			.clickonAddAdButton()
 			.AddTitle(AddAddata.TITLE)
 			.AddCategory()
-			.StartDate(AddAddata.START)
-			.EndDate(AddAddata.END)
-			.SelectDevice(AddAddata.DEVICE)
-			.File(AddAddata.CHOOSEFILE)
+			.StartDate()
+			.EndDate()
+			.SelectDevice()
+			.File()
 			.Preview()
 			.Proceed();
+			//.verifyUrl(AddAddata.URL);
+			//.View();
 		}
 	
 }

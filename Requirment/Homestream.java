@@ -2,7 +2,7 @@ package Requirment;
 import org.testng.annotations.Test;
 import config.Configuration;
 import lib.Data.Testdata.*;
-import lib.page.*;
+import lib.Userpage.*;
 
 public class Homestream extends Configuration {
 	@Test(priority=1) /* Priority given for executing test cases in order*/ 
@@ -32,8 +32,7 @@ public class Homestream extends Configuration {
 		/*ASSERTIONS /
 		/ PAGE METHODS /
 		/ Object.method(); */
-		Log.launchUrl(Logindata.URL)
-		.verifyTitle(Logindata.TITLE)
+		Log.verifyTitle(Logindata.TITLE)
 		.enterEmail(Logindata.EMAIL)
 		.enterPassword(Logindata.PASSWORD)
 		.clickOnLoginButton();
@@ -49,12 +48,23 @@ public class Homestream extends Configuration {
 		/*ASSERTIONS /
 		/ PAGE METHODS /
 		/ Object.method(); */
-		Ad.launchUrl(ViewAddata.URL)
-		.verifyTitle(ViewAddata.TITLE)
+		Ad.verifyTitle(ViewAddata.TITLE)
 		.clickonManageButton()
 		.View();
 		
 		}
 		
-		
+		@Test(priority=4) /* Priority given for executing test cases in order*/ 
+		public void Logout()throws Exception{ /*exception handler */
+
+		/*PAGE INSTANTIATIONS : instantiating required page classes*/
+		Logoutpage lg = new Logoutpage(super.driver, super.wait);
+
+
+		/*ASSERTIONS /
+		/ PAGE METHODS /
+		/ Object.method(); */
+		lg.verifyTitle(Logoutdata.TITLE)
+		.clickonLogoutButton();
+		}
 }
